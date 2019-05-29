@@ -40,7 +40,7 @@ public class CarroDAO {
     }
 
     public String alterar(CarroBean carro) {
-        String sql = "update set cor = ?, descricao set = ?, where placa = ?";
+        String sql = "update carro set cor = ?, descricao = ? where placa = ?";
 
         try {
             PreparedStatement ps = getCon().prepareStatement(sql);
@@ -61,7 +61,7 @@ public class CarroDAO {
 
     public String excluir(CarroBean carro) {
         String sql = "delete from carro where placa = ?";
-
+ 
         try {
             PreparedStatement ps = getCon().prepareStatement(sql);
 
